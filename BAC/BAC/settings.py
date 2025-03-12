@@ -28,10 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+# ASGI_APPLICATION = 'BAC.asgi.application'
 # Application definition
 
 INSTALLED_APPS = [
+    # 'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-    'Simulating_app',
+    'channels',
+    'realtime',
+    'realtime1',
     'new_bac_app',#Brute Force Detection
     "django_extensions"
 ]
@@ -53,7 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'Simulating_app.middleware.BrokenAccessControlMiddleware',
+    # 'Simulating_app.middleware.BrokenAccessControlMiddleware',
 ]
 MIDDLEWARE += ['new_bac_app.middleware.BlockUnauthorizedUsersMiddleware']
 
@@ -84,8 +87,12 @@ WSGI_APPLICATION = 'BAC.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'BAC',
+        'USER': 'postgres',
+        'PASSWORD': 'root@123',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -129,11 +136,11 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_SSL_REDIRECT = False
-X_FRAME_OPTIONS = 'DENY'
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# SECURE_BROWSER_XSS_FILTER = True
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# SECURE_SSL_REDIRECT = False
+# X_FRAME_OPTIONS = 'DENY'
 
 LOGGING = {
     'version': 1,
@@ -142,11 +149,11 @@ LOGGING = {
         'file': {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
-            'filename': 'intrusion_attempts.log',
+            'filename': 'failed_logins.log',
         },
     },
     'loggers': {
-        'django': {
+        'django.security': {
             'handlers': ['file'],
             'level': 'WARNING',
             'propagate': True,
@@ -154,12 +161,13 @@ LOGGING = {
     },
 }
 
+
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ],
     "DEFAULT_RENDERER_CLASSES": [
-        "rest_framework.renderers.BrowsableAPIRenderer",  # ✅ Enable Browsable API
+        # "rest_framework.renderers.BrowsableAPIRenderer",  # ✅ Enable Browsable API
         "rest_framework.renderers.JSONRenderer",
     ],
     # 'DEFAULT_THROTTLE_RATES': {
@@ -176,7 +184,7 @@ SIMPLE_JWT = {
     #  'ROTATE_REFRESH_TOKENS': True,
     # 'BLACKLIST_AFTER_ROTATION': True
 }
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # For Gmail SMTP
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
@@ -184,7 +192,7 @@ EMAIL_HOST_USER = 'devtestusr02@gmail.com'  # Replace with your email
 EMAIL_HOST_PASSWORD = 'rypf rtra cchs urub'  # Use App Password (Not Gmail password)
 DEFAULT_FROM_EMAIL = 'devtestusr02@gmail.com'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 import os
 print(os.getenv("SENTRY_DSN"))  # Check if DSN is loaded correctly
@@ -199,3 +207,11 @@ print(os.getenv("SENTRY_DSN"))  # Check if DSN is loaded correctly
 #     traces_sample_rate=1.0,  # Adjust as needed
 #     send_default_pii=True,  # Optional: Send user data
 # )
+
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}

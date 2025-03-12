@@ -11,6 +11,7 @@ class BlockUnauthorizedUsersMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
+        protected_paths = ["/login/", "/admin/login/"]
         ip = request.META.get('REMOTE_ADDR')
 
         # Check if the IP is already blocked
@@ -31,6 +32,9 @@ class BlockUnauthorizedUsersMiddleware:
                 alert_admin_on_intrusion(ip, request.path)
 
         return response
+
+
+
 
 
 def alert_admin_on_intrusion(ip, path):

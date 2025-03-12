@@ -395,3 +395,103 @@ Unauthorized: /api/token/
 Unauthorized: /api/token/
 Unauthorized: /api/token/
 Forbidden: /api/token/
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Unauthorized: /api/token/
+Unauthorized: /api/token/
+Unauthorized: /api/token/
+Unauthorized: /api/token/
+Unauthorized: /api/token/
+Forbidden: /api/token/
+Forbidden: /api/token/
+Forbidden: /api/token/
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /api-token-auth/
+"POST /api-token-auth/ HTTP/1.1" 404 3152
+You're accessing the development server over HTTPS, but it only supports HTTP.
+You're accessing the development server over HTTPS, but it only supports HTTP.
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Forbidden: /api/token/
+"POST /api/token/ HTTP/1.1" 403 55
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 7766
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 7639
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 63
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 63
+Unauthorized: /api/token/
+"POST /api/token/ HTTP/1.1" 401 63
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69
+Too Many Requests: /api/token/
+"POST /api/token/ HTTP/1.1" 429 69

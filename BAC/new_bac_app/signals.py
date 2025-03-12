@@ -4,7 +4,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-print("lala")
+# print("lala")
 def login_failed_handler(sender, credentials, request, **kwargs):
     logger.warning(
         f"Failed login attempt for {credentials.get('username', 'unknown')} from {request.META.get('REMOTE_ADDR')}")
